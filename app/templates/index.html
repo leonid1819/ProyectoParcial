@@ -29,10 +29,10 @@
     <link rel="stylesheet" href="vendor/icofont/icofont.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
     <!-- Template Main CSS File-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <!--Global site - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NNVMQP8HZ"></script>
-    <link rel="stylesheet" href="css/styles.b8919bf32dbf74523568.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.b8919bf32dbf74523568.css')}}">
     <style></style>
 </head> 
 <body id="body" class style>
@@ -45,7 +45,7 @@
             <header _ngcontent-hfm-c6 id="header" class="fixed-top header-scrolled" style>
                 <div _ngcontent-hfm-c6 class="container d-flex align-items-center">
                     <a _ngcontent-hfm-c6 routerlink="/" class="logo mr-auto" href="https://cepre.uni.edu.pe/#/">
-                        <img _ngcontent-hfm-c6 src="img/logo.svg" alt="img-fluid">
+                        <img _ngcontent-hfm-c6 src="{{ url_for('static', filename='img/logo.svg') }}" alt="img-fluid">
                     </a>
                     <nav _ngcontent-hfm-c6 id="nav-menu" class="nav-menu d-none d-lg-block">
                         <ul _ngcontent-hfm-c6>
@@ -194,7 +194,7 @@
                                     </div>
                                     <div _ngcontent-hfm-c9 class="col-lg-6 order-1 order-lg-2 hero-img">
                                         <div _ngcontent-hfm-c9 class="portfolio-details-container">
-                                            <img _ngcontent-hfm-c9 src="img/ciclos/Asesoria2022-2.png" alt="box-img-center img-fluid">
+                                            <img _ngcontent-hfm-c9 src="{{ url_for('static', filename='img/ciclos/Asesoria2022-2.png') }}" alt="box-img-center img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +222,7 @@
                                     </div>
                                     <div _ngcontent-hfm-c9 class="col-lg-6 order-1 order-lg-2 hero-img">
                                         <div _ngcontent-hfm-c9 class="portfolio-details-container">
-                                            <img _ngcontent-hfm-c9 src="img/ciclos/CicloPre2022-2_NUEVO.png" alt="box-img-center img-fluid">
+                                            <img _ngcontent-hfm-c9 src="{{ url_for('static', filename='img/ciclos/CicloPre2022-2_NUEVO.png') }}" alt="box-img-center img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -269,7 +269,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="img/ciclos/Asesoria.png" alt="Escolar" class="img-fluid">
+                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/Asesoria.png') }}" alt="Escolar" class="img-fluid">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -289,7 +289,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="img/ciclos/CicloPre.png" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloPre.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -309,7 +309,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="img/ciclos/CicloBasico.png" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloBasico.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -329,7 +329,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="img/ciclos/CicloIntensivo.png" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloIntensivo.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -359,7 +359,7 @@
                     <div _ngcontent-yrt-c9 class="slider">
                         <div _ngcontent-yrt-c9 class="slide-track">
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/01.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/01.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=0gS9SHYKbNk&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi">
                                         <h1 _ngcontent-yrt-c9>
@@ -371,7 +371,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/02.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/02.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -383,7 +383,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/03.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/03.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -395,7 +395,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/03.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/03.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -407,7 +407,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/04.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/04.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -419,7 +419,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/05.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/05.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -431,7 +431,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/06.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/06.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -443,7 +443,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/07.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/07.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -455,7 +455,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/08.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/08.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -467,7 +467,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="img/eventos/09.jpg">
+                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/09.jpg') }}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -493,7 +493,7 @@
                             </div>
                             <div _ngcontent-yrt-c9 class="col-lg-6">
                                 <br _ngcontent-yrt-c9>
-                                <img _ngcontent-yrt-c9 src="img/about.jpg" alt class="img-fluid">
+                                <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/about.jpg') }}" alt class="img-fluid">
                             </div>
                             <div _ngcontent-yrt-c9 class="col-lg-6 pt-4 pt-lg-0 content">
                                 <ul _ngcontent-yrt-c9>
