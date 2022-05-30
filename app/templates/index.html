@@ -40,7 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style2.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head> 
 <body id="body" class style>
     <button type="button" class="mobile-nav-toggle d-lg-none">
@@ -170,10 +170,10 @@
         <!-- BOTON DE MENSAJERIA/CHATBOT-->
  
         <section>
-            <button class="chat-btn"> 
+            <a href= "http://127.0.0.1:5000/bot" class="chat-btn"> 
                 <i class="material-icons"> comment </i>
-            </button>
-    
+            </a>
+    <!--
             <div class="chat-popup">
                 <div class="chat-area">
                  <div class="income-msg">
@@ -183,22 +183,24 @@
                 </div>
     
                 <form class="input-area">
-                    <input id="textInput" type="text" class="msgr-input" name="text">
-                    <button type="submit" class="submit" value="enviar"> <i class="material-icons"> send</i></button>
+                    <input id="textInput" type="text" class="msger-input" >
+                    <button type="submit" class="submit" > <i class="material-icons"> send</i></button>
                   
                 </form>
                 
             
                 
-            </div>
+            </div>-->
             
         </section>
+        <!--
         <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
         <script>
             const msgerChat = get(".chat-area");
             const msgerForm = get(".input-area");
             const msgerInput = get(".msger-input");
-            msgerForm.addEventListener("submit", event => {
+            const submitBut = document.querySelector('.submit');
+            submitBut.addEventListener('click', event => {
                 event.preventDefault();
                 const msgText = msgerInput.value;
 
@@ -230,14 +232,12 @@
             function get(selector, root = document) {
                 return root.querySelector(selector);
                 }
-        </script>
+        </script>-->
     
     
         <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
-        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+        <!--<script src="{{url_for('static', filename='js/main.js')}}"></script>-->
 
-        <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
-        <script src="{{url_for('static', filename='js/chat.js')}}"></script>
         
         <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
         <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
@@ -855,7 +855,6 @@
         </ul>
     </nav>
     <div class="mobile-nav-overly"></div>
-    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
-    <script src="{{url_for('static', filename='js/chat.js')}}"></script>
+
 </body>
 </html>

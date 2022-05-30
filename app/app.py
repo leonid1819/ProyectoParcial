@@ -3,6 +3,10 @@ from controller.bot import bot
 
 app = Flask(__name__)
 
+@app.route('/bot')
+def robot():
+    return render_template('bot.html')
+
 @app.route('/')
 def index():
     return render_template('index.html')
