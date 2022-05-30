@@ -76,19 +76,6 @@
   color: #1FA461;
 }
 
-
-@media (min-width: 576px) {
-  .rounded-nav {
-    border-radius: 50rem !important;
-  }
-}
-
-@media (min-width: 576px) {
-  .rounded-nav .nav-link {
-    border-radius: 50rem !important;
-  }
-}
-
 /*With arrow tabs- intensivo*/
 
 .with-arrow .nav-link.active {
@@ -154,10 +141,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-}
 
 a {
   color: #3C7899;
@@ -255,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 36px 0;
   /* background: rgba(125, 27, 15, 0.9) ; */
 }
 
@@ -369,15 +352,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 35px;
 }
 
-@media (max-width: 1366px) {
-  .nav-menu .drop-down .drop-down ul {
-    left: -90%;
-  }
-  .nav-menu .drop-down .drop-down:hover > ul {
-    left: -100%;
-  }
-}
-
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
@@ -397,13 +371,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .get-started-btn {
-    margin: 0 48px 0 0;
-    padding: 6px 20px 7px 20px;
-  }
-}
-
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
@@ -419,6 +386,34 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   text-align: right;
 }
+/* CHAT BOTON  ITENTO 1 
+.chat-button{
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background: url(../img/ico_boton_flot/anadir.png);
+  background: 0px 3px 12px rgba(0, 0, 0, 0.2);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+ CHAT BOTON*/
+
+ /* INTENTO 2
+.icon-comment-alt{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: yellow;
+  font-size: 40px;
+  background: #23AD00;
+  border-radius: 40%;
+}
+*/
+
 
 .mobile-nav-toggle i {
   color: #fff;
@@ -867,62 +862,24 @@ h1, h2, h3, h4, h5, h6 {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 991px) {
-    .modelo__prueba, .archivos__pre, .archivos__bas,.archivos__intensivo a{
-    margin-top: .3rem;
+/*   
+  .modal-content {
+    height: 100% !important;
+    overflow:visible;
   }
-#panel-pre-bas .container{
-  padding-top: 85px;
-}
-  #header {
-    padding: 10px 0;
+  
+  .modal-body {
+    height: 80%;
+    overflow: auto;
   }
-  #header .logo img {
-    max-height: 40px;
-  }
-  /* #hero .container {
-    padding-top: 1px;
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
   } */
-  #hero {
-    text-align: center;
-    background: linear-gradient(to right, rgba(106 , 27, 15, 0.9) 0%, rgba(106, 27, 15, 0.9) 45%,rgba(106, 27, 15, 0.8) 100%), url("../img/cta-bg-sectorT.jpg") fixed center center;
-  }
-  #hero .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
   
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-    margin-bottom: 1px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 1px;
-  }
-  #hero .hero-img img {
-    width: 50%;
-    margin-bottom: 1px;
-  }
-  
-}
-@media (max-height : 441px) and (max-width: 991px){
-  #hero {
-    height: 200vh;
-  }
-  /* #hero .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
-  #hero .hero-img {
-    text-align: center;
-  }*/
-  #hero .hero-img img {
-    width:55%;
-  }
-  
+.suscribete__pie {
+  display: none;
 }
 
 @media (max-width: 768px)  {
@@ -965,9 +922,32 @@ h1, h2, h3, h4, h5, h6 {
   }
   
 }
-.suscribete__pie {
-  display: none;
+
+@media (max-width: 768px) {
+  .get-started-btn {
+    margin: 0 48px 0 0;
+    padding: 6px 20px 7px 20px;
+  }
 }
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 @media (max-width: 575px) {
   .eventos .slide img{
     width: 201px;
@@ -1020,25 +1000,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 }
-
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -1114,14 +1075,6 @@ section {
   filter: none;
   transform: scale(1.1);
 }
-
-@media (max-width: 768px) {
-  .cliens img {
-    max-width: 40%;
-  }
-  
-}
-
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
@@ -1279,32 +1232,6 @@ section {
   display: none;
 }
 
-@media (max-width: 1024px) {
-  .why-us .content, .why-us .accordion-list {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 992px) {
-
-  .why-us .img {
-    min-height: 400px;
-  }
-  .why-us .content {
-    padding-top: 30px;
-  }
-  .why-us .accordion-list {
-    padding-bottom: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .why-us .img {
-    min-height: 200px;
-  }
-}
-
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
@@ -1447,20 +1374,6 @@ section {
 .cta .cta-btn:hover {
   background: #47b2e4;
   border: 2px solid #47b2e4;
-}
-
-@media (max-width: 1024px) {
-  .cta {
-    background-attachment: scroll;
-  }
-}
-
-@media (min-width: 769px) {
-  .cta .cta-btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -1783,28 +1696,6 @@ section {
 .pricing .featured .buy-btn:hover {
   background: #23a3df;
 }
-
-@media (max-width: 992px) {
-  .pricing .box {
-    max-width: 60%;
-    margin: 0 auto 30px auto;
-  }
-}
-
-@media (max-width: 767px) {
-  .pricing .box {
-    max-width: 80%;
-    margin: 0 auto 30px auto;
-  }
-}
-
-@media (max-width: 420px) {
-  .pricing .box {
-    max-width: 100%;
-    margin: 0 auto 30px auto;
-  }
-}
-
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
@@ -1878,12 +1769,6 @@ section {
 
 .faq .faq-list a.collapsed .icon-close {
   display: none;
-}
-
-@media (max-width: 1200px) {
-  .faq .faq-list {
-    padding: 0;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2089,33 +1974,11 @@ section {
   /* min-height: 40px; */
   /* margin-top: 95px; */
 }
-@media (max-width: 992px) {
-  .breadcrumbs {
-    /* margin-top: 61px; */
-    padding: 1rem 0.8rem;
-  }
-  .cabeza {
-    padding-top: 4rem;
-    background: rgba(125, 27, 15, 1) ;
-    /* min-height: 61px; */
-    /* margin-top: 95px; */
-  }
-}
 .breadcrumbs h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #37517e;
 }
-@media (max-width: 992px) {
-  .breadcrumbs h2 {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #37517e;
-    margin: .1rem;
-    
-  }
-}
-
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -2211,16 +2074,6 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0 0 0 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio-details .portfolio-description h2 {
-    width: 100%;
-  }
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2407,20 +2260,6 @@ section {
   transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  #footer .footer-bottom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  #footer .copyright, #footer .credits {
-    text-align: center;
-    float: none;
-  }
-  #footer .credits {
-    padding-top: 4px;
-  }
-}
-
 .carousel-indicators{
   bottom: calc(15% - 25%) !important;
   /* display: none; */
@@ -2585,28 +2424,6 @@ top: 0;
 .ciclos{
     padding: 0;
   }
- 
-@media (max-width: 575px) {
-  .eventos .slider {
-    height: 150px;
-    padding: 15px 0;
-    /* width: 250px; */
-  }
-  .eventos .slide {
-    width: 201px;
-    height: 113.06px;
-    margin-right: 10px;
-  }
-  .eventos, .ciclos{
-    padding: 20px 0 0 0;
-  }
-  .eventos .section-title, .ciclos .section-title{
-    padding: 0;
-  }
-  
-  
-}
-
 
 .navbar-h .navbar-h-content {
   /* background: #fff; */

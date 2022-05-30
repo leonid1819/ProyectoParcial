@@ -22,18 +22,25 @@
     <meta property="og:type" content="article">
     <meta property="og:tittle" content="CEPRE-UNI">
     <meta property="og:description" content="El camino para alcanzar el sueño de tu realización profesional"> 
-    <meta property="og:image" content="img/ciclos/PRE.png">
+    <meta property="og:image" content="{{url_for('static', filename='img/ciclos/PRE.png')}}">
     <!-- Favicons-->
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="{{url_for('static', filename='img/favicon.png')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="vendor/icofont/icofont.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='vendor/icofont/icofont.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
     <!-- Template Main CSS File-->
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <!--Global site - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NNVMQP8HZ"></script>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.b8919bf32dbf74523568.css')}}">
-    <style></style>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.b8919bf32dbf74523568.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='js/chat.js')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/fontello.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='js/chatbot1.js')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='js/chatbot2.js')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style2.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head> 
 <body id="body" class style>
     <button type="button" class="mobile-nav-toggle d-lg-none">
@@ -45,7 +52,7 @@
             <header _ngcontent-hfm-c6 id="header" class="fixed-top header-scrolled" style>
                 <div _ngcontent-hfm-c6 class="container d-flex align-items-center">
                     <a _ngcontent-hfm-c6 routerlink="/" class="logo mr-auto" href="https://cepre.uni.edu.pe/#/">
-                        <img _ngcontent-hfm-c6 src="{{ url_for('static', filename='img/logo.svg') }}" alt="img-fluid">
+                        <img _ngcontent-hfm-c6 src="{{url_for('static', filename='img/logo.svg')}}" alt="img-fluid">
                     </a>
                     <nav _ngcontent-hfm-c6 id="nav-menu" class="nav-menu d-none d-lg-block">
                         <ul _ngcontent-hfm-c6>
@@ -150,6 +157,106 @@
                 </div>
             </header>
         </app-header>
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--###############################-->
+        <!--###############################-->
+        <!--###############################-->
+        <!-- BOTON DE MENSAJERIA/CHATBOT-->
+ 
+        <section>
+            <button class="chat-btn"> 
+                <i class="material-icons"> comment </i>
+            </button>
+    
+            <div class="chat-popup">
+                <div class="chat-area">
+                 <div class="income-msg">
+                     <img src="{{url_for('static', filename='img/ico_boton_flot/ColmiBot5.png')}}" class="avatar" alt="">
+                     <span class="msg"> Hola, en que puedo ayudarte??</span>
+                 </div>   
+                </div>
+    
+                <form class="input-area">
+                    <input id="textInput" type="text" class="msgr-input" name="text">
+                    <button type="submit" class="submit" value="enviar"> <i class="material-icons"> send</i></button>
+                  
+                </form>
+                
+            
+                
+            </div>
+            
+        </section>
+        <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+        <script>
+            const msgerChat = get(".chat-area");
+            const msgerForm = get(".input-area");
+            const msgerInput = get(".msger-input");
+            msgerForm.addEventListener("submit", event => {
+                event.preventDefault();
+                const msgText = msgerInput.value;
+
+                botResponse(msgText);
+                });
+            function appendMessage( text) {
+                //   Simple solution for small apps
+                const msgHTML = `
+                <div class="income-msg">
+                    <img src="{{url_for('static', filename='img/ico_boton_flot/ColmiBot5.png')}}" class="avatar" alt="">
+                    <span class="msg"> ${text}</span>
+                </div>
+                `;
+                msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+                msgerChat.scrollTop += 500;
+                }
+
+            function botResponse(rawText) {
+                // Bot Response
+                $.get("/get", { msg: rawText }).done(function (data) {
+                    console.log(rawText);
+                    console.log(data);
+                    const msgText = data;
+                    appendMessage( msgText);
+                });
+            }
+
+
+            function get(selector, root = document) {
+                return root.querySelector(selector);
+                }
+        </script>
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+        <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+        <script src="{{url_for('static', filename='js/chat.js')}}"></script>
+        
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
+        <!--BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTTTTTTTTTTTTTTTTTTTTTTTT-->
         <router-outlet _ngcontent-hfm-c8></router-outlet>
         <app-home _nghost-hfm-c9>
             <section _ngcontent-hfm-c9 id="hero">
@@ -194,7 +301,7 @@
                                     </div>
                                     <div _ngcontent-hfm-c9 class="col-lg-6 order-1 order-lg-2 hero-img">
                                         <div _ngcontent-hfm-c9 class="portfolio-details-container">
-                                            <img _ngcontent-hfm-c9 src="{{ url_for('static', filename='img/ciclos/Asesoria2022-2.png') }}" alt="box-img-center img-fluid">
+                                            <img _ngcontent-hfm-c9 src="{{url_for('static', filename='img/ciclos/Asesoria2022-2.png')}}" alt="box-img-center img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +329,7 @@
                                     </div>
                                     <div _ngcontent-hfm-c9 class="col-lg-6 order-1 order-lg-2 hero-img">
                                         <div _ngcontent-hfm-c9 class="portfolio-details-container">
-                                            <img _ngcontent-hfm-c9 src="{{ url_for('static', filename='img/ciclos/CicloPre2022-2_NUEVO.png') }}" alt="box-img-center img-fluid">
+                                            <img _ngcontent-hfm-c9 src="{{url_for('static', filename='img/ciclos/CicloPre2022-2_NUEVO.png')}}" alt="box-img-center img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -269,7 +376,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/Asesoria.png') }}" alt="Escolar" class="img-fluid">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/ciclos/Asesoria.png')}}" alt="Escolar" class="img-fluid">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -289,7 +396,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloPre.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/ciclos/CicloPre.png')}}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -309,7 +416,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloBasico.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/ciclos/CicloBasico.png')}}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -329,7 +436,7 @@
                                 <div _ngcontent-yrt-c9 class="icon-box">
                                     <div _ngcontent-yrt-c9 class="ciclo__regular__item">
                                         <a _ngcontent-yrt-c9 class="logo mr-auto card__ciclo">
-                                            <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/ciclos/CicloIntensivo.png') }}" alt class="img-fluid" style="filter: grayscale(1);">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/ciclos/CicloIntensivo.png')}}" alt class="img-fluid" style="filter: grayscale(1);">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="card-body">
@@ -359,7 +466,7 @@
                     <div _ngcontent-yrt-c9 class="slider">
                         <div _ngcontent-yrt-c9 class="slide-track">
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/01.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/01.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=0gS9SHYKbNk&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi">
                                         <h1 _ngcontent-yrt-c9>
@@ -371,7 +478,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/02.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/02.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -383,7 +490,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/03.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/03.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -395,7 +502,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/03.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/03.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -407,7 +514,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/04.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/04.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -419,7 +526,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/05.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/05.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -431,7 +538,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/06.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/06.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -443,7 +550,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/07.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/07.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -455,7 +562,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/08.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/08.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -467,7 +574,7 @@
                                 </div>
                             </div>
                             <div _ngcontent-yrt-c9 class="slide">
-                                <img _ngcontent-yrt-c9 alt src="{{ url_for('static', filename='img/eventos/09.jpg') }}">
+                                <img _ngcontent-yrt-c9 alt src="{{url_for('static', filename='img/eventos/09.jpg')}}">
                                 <div _ngcontent-yrt-c9 class="carousel-item__details">
                                     <a _ngcontent-yrt-c9 target="_blank" href="https://www.youtube.com/watch?v=5ChC3w48amw&list=PL8hEQ3tnSmrQW48TEk0241DeZWTykRYDi&index=3">
                                         <h1 _ngcontent-yrt-c9>
@@ -493,7 +600,7 @@
                             </div>
                             <div _ngcontent-yrt-c9 class="col-lg-6">
                                 <br _ngcontent-yrt-c9>
-                                <img _ngcontent-yrt-c9 src="{{ url_for('static', filename='img/about.jpg') }}" alt class="img-fluid">
+                                <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/about.jpg')}}" alt class="img-fluid">
                             </div>
                             <div _ngcontent-yrt-c9 class="col-lg-6 pt-4 pt-lg-0 content">
                                 <ul _ngcontent-yrt-c9>
@@ -540,7 +647,7 @@
                                 <div _ngcontent-yrt-c9 class="col-12 col-sm-6 mt-2">
                                     <div _ngcontent-yrt-c9 class="card">
                                         <a _ngcontent-yrt-c9 target="_bank" href="https://zoom.us/j/98415958369?pwd=VG51RkE4QVZkemhaNFZTV2x5NlBqdz09#success">
-                                            <img _ngcontent-yrt-c9 src="img/comunicados/examen.jpeg" alt="Asesorías" class="card-img-top">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/comunicados/examen.jpeg')}}" alt="Asesorías" class="card-img-top">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="modal-footer">
@@ -550,7 +657,7 @@
                                 <div _ngcontent-yrt-c9 class="col-12 col-sm-6 mt-2">
                                     <div _ngcontent-yrt-c9 class="card">
                                         <a _ngcontent-yrt-c9 target="_bank" href="https://zoom.us/j/98415958369?pwd=VG51RkE4QVZkemhaNFZTV2x5NlBqdz09#success">
-                                            <img _ngcontent-yrt-c9 src="img/comunicados/charla.jpeg" alt="Asesorías" class="card-img-top">
+                                            <img _ngcontent-yrt-c9 src="{{url_for('static', filename='img/comunicados/charla.jpeg')}}" alt="Asesorías" class="card-img-top">
                                         </a>
                                     </div>
                                     <div _ngcontent-yrt-c9 class="modal-footer">
@@ -748,5 +855,7 @@
         </ul>
     </nav>
     <div class="mobile-nav-overly"></div>
+    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+    <script src="{{url_for('static', filename='js/chat.js')}}"></script>
 </body>
 </html>
