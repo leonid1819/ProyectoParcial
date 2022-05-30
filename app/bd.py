@@ -8,6 +8,3 @@ def obtener_conexion():
     contrasenia='pO(>$zKJ~nG/Q5D~'
 
     return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER='+server+';DATABASE='+bd+';UID='+userio+';PWD='+contrasenia+'')
-    
-
-
