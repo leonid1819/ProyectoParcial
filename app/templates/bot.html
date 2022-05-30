@@ -19,10 +19,10 @@
     </header>
     <main class="msger-chat">
       <div class="msg left-msg">
-        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+        <div class="msg-img" style="background-image: url(https://i.ibb.co/ZdVykhn/Colmi-Bot5.png)"></div>
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">Chatbot</div>
+            <div class="msg-info-name">FangBot</div>
             <div class="msg-info-time">12:45</div>
           </div>
           <div class="msg-text">
@@ -33,7 +33,7 @@
     </main>
     <form class="msger-inputarea">
       <input type="text" class="msger-input" id="textInput" placeholder="Ingresa tu mensaje...">
-      <button type="submit" class="msger-send-btn">Send</button>
+      <button type="submit" class="msger-send-btn">Enviar</button>
     </form>
   </section>
   <!-- partial -->
@@ -43,9 +43,9 @@
     const msgerInput = get(".msger-input");
     const msgerChat = get(".msger-chat");
     // Icons made by Freepik from www.flaticon.com
-    const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
-    const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-    const BOT_NAME = "    ChatBot";
+    const BOT_IMG = "{{url_for('static', filename='img/ico_boton_flot/ColmiBot5.png')}}";
+    const PERSON_IMG = "{{url_for('static', filename='img/ico_boton_flot/user.png')}}";
+    const BOT_NAME = "    FangBot";
     const PERSON_NAME = "Tu";
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();
